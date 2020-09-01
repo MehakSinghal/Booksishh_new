@@ -1,4 +1,5 @@
 import 'package:booksishh/screens/all_books_screen.dart';
+import 'package:booksishh/screens/cart_screen.dart';
 import 'package:flutter/material.dart';
 import '../widget/appDrawer.dart';
 import '../widget/bookItem.dart';
@@ -75,7 +76,12 @@ class FavouritesScreen extends StatelessWidget {
               icon: Icon(
                 Icons.shopping_cart,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => CartScreen()));
+              },
             ),
           ],
         ),
@@ -92,7 +98,7 @@ class FavouritesScreen extends StatelessWidget {
           itemCount: 2,
         ),
         bottomNavigationBar: Container(
-          height: 90,
+          height: 80,
           padding: EdgeInsets.all(10),
           color: Colors.white,
           child: ButtonBar(

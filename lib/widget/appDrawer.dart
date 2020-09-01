@@ -1,4 +1,5 @@
 import 'package:booksishh/screens/all_books_screen.dart';
+import 'package:booksishh/screens/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -54,10 +55,8 @@ class AppDrawer extends StatelessWidget {
                     fontWeight: FontWeight.bold),
               ),
               onTap: () {
-                Navigator.pushReplacement(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => AllBookScreen()));
+                Navigator.pushReplacement(context,
+                    MaterialPageRoute(builder: (context) => AllBookScreen()));
               },
             ),
             ListTile(
@@ -90,7 +89,10 @@ class AppDrawer extends StatelessWidget {
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => SettingsScreen()));
+              },
             ),
             ListTile(
               contentPadding: EdgeInsets.only(left: 30, top: 20),
