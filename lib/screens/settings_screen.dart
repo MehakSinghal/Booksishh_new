@@ -77,13 +77,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               title: TextFormField(
                 initialValue: data[i],
-                autofocus: true,
+                autofocus: !x,
                 style: TextStyle(color: Colors.grey, fontSize: 20),
                 readOnly:x,
                 cursorColor: Colors.grey,
                 onFieldSubmitted: (value){
                   setState(() {
-                    x=!x;
+                    x=false;
                   });
                 },
                 decoration: InputDecoration(
@@ -103,7 +103,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
                 onPressed: () {
                   setState(() {
-                    x=!x;
+                    x=true;
                   });
                   /*showDialog(
                       context: context,

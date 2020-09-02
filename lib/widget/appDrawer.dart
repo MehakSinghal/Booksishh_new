@@ -1,3 +1,4 @@
+import 'package:booksishh/screens/Orders_screen.dart';
 import 'package:booksishh/screens/all_books_screen.dart';
 import 'package:booksishh/screens/settings_screen.dart';
 import 'package:flutter/cupertino.dart';
@@ -73,7 +74,10 @@ class AppDrawer extends StatelessWidget {
                     fontSize: 25,
                     fontWeight: FontWeight.bold),
               ),
-              onTap: () {},
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => OrdersScreen()));
+              },
             ),
             ListTile(
               contentPadding: EdgeInsets.only(left: 30, top: 20),
