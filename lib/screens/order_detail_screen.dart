@@ -2,6 +2,16 @@ import 'package:booksishh/widget/order_detail_item.dart';
 import 'package:flutter/material.dart';
 
 class OrderDetailScreen extends StatelessWidget {
+
+  Widget _buildRow(String title, String amount){
+    return Row(
+      children: [
+        Text(title,style: TextStyle(fontSize: 20),),
+        Spacer(),
+        Text(amount,style: TextStyle(fontSize: 20),),
+      ],
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,11 +46,23 @@ class OrderDetailScreen extends StatelessWidget {
          OrderDetailItem(),
           Container(
             width: 390,
-            height: 350,
+            height: 200,
             margin: EdgeInsets.only(top: 20,left: 15,right: 15),
-            //padding: EdgeInsets.only(left: 10,right: 10,top: 10),
+            padding: EdgeInsets.only(left: 10,right: 10,top: 20),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10), color: Colors.white),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text('PAYMENT DETAILS',style: TextStyle(fontSize: 30,fontWeight: FontWeight.w400),),
+                Divider(thickness: 2,),
+                _buildRow('Total','\$5.4'),
+                _buildRow('Shipping','\$5.4'),
+                _buildRow('Discount','\$5.4'),
+                Divider(thickness: 2,),
+                _buildRow('Grand Total','\$5.4'),
+              ],
+            ),
           )
         ],
       ),

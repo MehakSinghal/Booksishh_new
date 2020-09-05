@@ -3,51 +3,15 @@ import 'package:booksishh/screens/cart_screen.dart';
 import 'package:flutter/material.dart';
 import '../widget/appDrawer.dart';
 import '../widget/bookItem.dart';
-import 'dart:io';
+
 
 class FavouritesScreen extends StatelessWidget {
-  Future<bool> _onWillPop(BuildContext ctx) async {
-    return showDialog(
-        context: ctx,
-        builder: (ctx) => AlertDialog(
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10)),
-              title: new Text(
-                'Are you sure?',
-                style: TextStyle(
-                  color: Color.fromRGBO(230, 64, 92, 0).withOpacity(0.5),
-                ),
-              ),
-              content: Text("Do you really want to exit the app?"),
-              actions: [
-                FlatButton(
-                  child: Text(
-                    "No",
-                    style: TextStyle(
-                      color: Color.fromRGBO(230, 64, 92, 0).withOpacity(0.5),
-                    ),
-                  ),
-                  onPressed: () {
-                    Navigator.of(ctx).pop();
-                  },
-                ),
-                FlatButton(
-                    child: Text(
-                      "Yes",
-                      style: TextStyle(
-                        color: Color.fromRGBO(230, 64, 92, 0).withOpacity(0.5),
-                      ),
-                    ),
-                    onPressed: () => exit(0)),
-              ],
-            ));
-  }
-
   @override
   Widget build(BuildContext context) {
-    return WillPopScope(
+    return /*WillPopScope(
       onWillPop: () => _onWillPop(context),
-      child: Scaffold(
+      child:*/
+      Scaffold(
         backgroundColor: Color.fromRGBO(234, 243, 250, 0).withOpacity(1),
         appBar: AppBar(
           shape: RoundedRectangleBorder(
@@ -157,7 +121,7 @@ class FavouritesScreen extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
+      );
+ //   );
   }
 }

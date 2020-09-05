@@ -35,17 +35,28 @@ class OrderDetailItem extends StatelessWidget {
           ),
           Expanded(
             child: ListView.builder(
-              itemCount: 10,
+              itemCount: 5,
               itemBuilder: (ctx, i) => Row(
                 children: [
                   Container(
                     height: 65,
                     width: 65,
                     margin: EdgeInsets.only(top: 12,left: 8),
-                    color: Colors.yellow,
                     child: Image.network('https://images.loksatta.com/2019/12/Book.jpg',fit: BoxFit.cover,),
                   ),
-
+                  SizedBox(width: 15,),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Row(children: [
+                        Text('Title',style: TextStyle(color: Colors.grey,fontSize: 22),),
+                        SizedBox(width: 160,),
+                        Text('\$5.3',style: TextStyle(color: Colors.grey,fontSize: 22),),
+                      ],),
+                      SizedBox(height: 15,),
+                      Text('Quantity:2',style: TextStyle(color: Colors.grey,fontSize: 18),),
+                    ],
+                  ),
                 ],
               ),
             ),

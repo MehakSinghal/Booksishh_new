@@ -1,3 +1,4 @@
+import 'package:booksishh/screens/book_detail_screen.dart';
 import 'package:booksishh/screens/cart_screen.dart';
 import 'package:booksishh/screens/favourites_screen.dart';
 import 'package:flutter/material.dart';
@@ -79,10 +80,8 @@ class AllBookScreen extends StatelessWidget {
               ),
               iconSize: 30,
               onPressed: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => CartScreen()));
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => CartScreen()));
               },
             ),
           ],
@@ -96,7 +95,10 @@ class AllBookScreen extends StatelessWidget {
             crossAxisSpacing: 1,
             childAspectRatio: 1 / 1.5,
           ),
-          itemBuilder: (ctx, i) => BookItem(),
+          itemBuilder: (ctx, i) => InkWell(child: BookItem(),onTap: (){
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => BookDetailScreen()));
+          },),
           itemCount: 6,
         ),
         bottomNavigationBar: Container(
@@ -149,7 +151,7 @@ class AllBookScreen extends StatelessWidget {
                         fontSize: 20),
                   ),
                   onPressed: () {
-                    Navigator.pushReplacement(
+                    Navigator.push(
                         context,
                         MaterialPageRoute(
                             builder: (context) => FavouritesScreen()));
