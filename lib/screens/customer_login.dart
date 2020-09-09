@@ -7,14 +7,10 @@ class CustomerLogin extends StatelessWidget {
       backgroundColor: Color.fromRGBO(234, 243, 250, 0).withOpacity(1),
       appBar: AppBar(
         toolbarHeight: 100,
-        title: Hero(
-          tag: 'c',
-          transitionOnUserGestures: true,
-          child: Text(
+        title:Text(
             'CUSTOMER ',
             style: TextStyle(fontSize: 30,color: Colors.black),
           ),
-        ),
       ),
     );
   }

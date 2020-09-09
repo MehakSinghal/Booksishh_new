@@ -114,8 +114,6 @@ class CommonScreen extends StatelessWidget {
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(25),
                         ),
-                        child: Hero(
-                          tag: 'c',
                           child: Text(
                             "CUSTOMER",
                             style: TextStyle(
@@ -124,7 +122,6 @@ class CommonScreen extends StatelessWidget {
                                 fontWeight: FontWeight.bold,
                                 fontSize: 20),
                           ),
-                        ),
                         onPressed: () {
                            Navigator.push(
                             context,
