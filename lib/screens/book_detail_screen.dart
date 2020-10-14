@@ -4,6 +4,10 @@ import 'cart_screen.dart';
 import 'favourites_screen.dart';
 
 class BookDetailScreen extends StatefulWidget {
+  int i;
+
+  BookDetailScreen(this.i);
+
   @override
   _BookDetailScreenState createState() => _BookDetailScreenState();
 }
@@ -96,9 +100,13 @@ class _BookDetailScreenState extends State<BookDetailScreen> {
               children: [
                 Container(
                   margin: EdgeInsets.only(right: 8),
-                  color: Colors.lightBlue,
+                 // color: Colors.lightBlue,
                   height: 240,
                   width: 160,
+                  child: Hero(
+                    tag: widget.i,
+                    child: Image.network("https://images.loksatta.com/2019/12/Book.jpg",fit: BoxFit.cover,),
+                  ),
                 ),
                 Column(
                   crossAxisAlignment: CrossAxisAlignment.start,

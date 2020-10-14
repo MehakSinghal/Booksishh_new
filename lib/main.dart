@@ -1,4 +1,6 @@
 import 'package:booksishh/screens/common_screen.dart';
+import 'package:booksishh/screens/seller_dashboard.dart';
+import 'package:booksishh/screens/tab_screen.dart';
 
 import 'screens/all_books_screen.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
         //backgroundColor: Color.fromRGBO(234,243,250,0).withOpacity(1),  blue
         // Color.fromRGBO(7,7,7,0).withOpacity(0.46),  grey
       ),
-      home: CommonScreen(),
+      home: TabScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

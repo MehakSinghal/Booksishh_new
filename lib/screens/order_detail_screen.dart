@@ -30,7 +30,7 @@ class OrderDetailScreen extends StatelessWidget {
         title: Text(
           "ORDER ID",
           style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25),
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
         ),
         actions: [
           CircleAvatar(

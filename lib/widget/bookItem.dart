@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class BookItem extends StatelessWidget {
+  int i;
+
+  BookItem(this.i);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -15,12 +19,15 @@ class BookItem extends StatelessWidget {
             decoration: BoxDecoration(
                 //color: Colors.grey,
                 borderRadius: BorderRadius.vertical(top: Radius.circular(10))),
-            child: ClipRRect(
-              child: Image.network(
-                "https://images.loksatta.com/2019/12/Book.jpg",
-                fit: BoxFit.cover,
+            child: Hero(
+              tag: i,
+              child: ClipRRect(
+                child: Image.network(
+                  "https://images.loksatta.com/2019/12/Book.jpg",
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
               ),
-              borderRadius: BorderRadius.vertical(top: Radius.circular(10)),
             ),
           ),
           Container(

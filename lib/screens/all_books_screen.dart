@@ -64,7 +64,7 @@ class AllBookScreen extends StatelessWidget {
           title: Text(
             "ALL BOOKS",
             style: TextStyle(
-                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25),
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
           ),
           actions: [
             IconButton(
@@ -95,9 +95,9 @@ class AllBookScreen extends StatelessWidget {
             crossAxisSpacing: 1,
             childAspectRatio: 1 / 1.5,
           ),
-          itemBuilder: (ctx, i) => InkWell(child: BookItem(),onTap: (){
+          itemBuilder: (ctx, i) => InkWell(child: BookItem(i),onTap: (){
             Navigator.push(context,
-                MaterialPageRoute(builder: (context) => BookDetailScreen()));
+                MaterialPageRoute(builder: (context) => BookDetailScreen(i)));
           },),
           itemCount: 6,
         ),

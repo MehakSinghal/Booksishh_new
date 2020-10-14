@@ -27,7 +27,7 @@ class FavouritesScreen extends StatelessWidget {
           title: Text(
             "FAVOURITES",
             style: TextStyle(
-                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25),
+                color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
           ),
           actions: [
             IconButton(
@@ -58,7 +58,7 @@ class FavouritesScreen extends StatelessWidget {
             crossAxisSpacing: 1,
             childAspectRatio: 1 / 1.5,
           ),
-          itemBuilder: (ctx, i) => BookItem(),
+          itemBuilder: (ctx, i) => BookItem(i),
           itemCount: 2,
         ),
         bottomNavigationBar: Container(

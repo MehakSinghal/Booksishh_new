@@ -22,7 +22,7 @@ class OrdersScreen extends StatelessWidget {
         title: Text(
           "ORDERS",
           style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25),
+              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
         ),
       ),
       bottomNavigationBar: Container(

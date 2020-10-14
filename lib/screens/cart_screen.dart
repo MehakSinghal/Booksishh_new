@@ -13,7 +13,7 @@ class CartScreen extends StatelessWidget {
               right: Radius.circular(18),
             )),
         title: Text('CART', style: TextStyle(
-            color: Colors.black, fontWeight: FontWeight.bold, fontSize: 25),),
+            color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),),
         toolbarHeight: 75,
         iconTheme: IconThemeData(
             color: Color.fromRGBO(230, 64, 92, 0).withOpacity(0.5), size: 1),
