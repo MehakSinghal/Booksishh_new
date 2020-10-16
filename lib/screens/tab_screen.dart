@@ -46,10 +46,14 @@ class _TabScreenState extends State<TabScreen> {
         toolbarHeight: 75,
         backgroundColor: Colors.white,
         iconTheme: IconThemeData(
-            color: Color.fromRGBO(230, 64, 92, 0).withOpacity(0.5), size: 1),
+            color: _selectedPageIndex==2 ? Colors.white : Color.fromRGBO(230, 64, 92, 0).withOpacity(0.5), size: 1),
         actions: [
           IconButton(
-            icon: Icon(
+            icon: _selectedPageIndex==0 ? Icon(
+              Icons.search,
+            ): _selectedPageIndex==1 ? Icon(
+              Icons.save,
+            ) : Icon(
               Icons.search,
             ),
             iconSize: 30,

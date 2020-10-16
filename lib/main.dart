@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
         //backgroundColor: Color.fromRGBO(234,243,250,0).withOpacity(1),  blue
         // Color.fromRGBO(7,7,7,0).withOpacity(0.46),  grey
       ),
-      home: TabScreen(),
+      home: CommonScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

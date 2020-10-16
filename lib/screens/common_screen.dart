@@ -1,4 +1,7 @@
+import 'package:booksishh/screens/all_books_screen.dart';
 import 'package:booksishh/screens/customer_login.dart';
+import 'package:booksishh/screens/seller_dashboard.dart';
+import 'package:booksishh/screens/tab_screen.dart';
 import 'package:flutter/material.dart';
 
 class CommonScreen extends StatelessWidget {
@@ -60,10 +63,10 @@ class CommonScreen extends StatelessWidget {
                               fontSize: 20),
                         ),
                         onPressed: () {
-                          /* Navigator.push(
+                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => ()));*/
+                                builder: (context) => TabScreen()));
                         },
                       ),
                     ),
@@ -126,7 +129,7 @@ class CommonScreen extends StatelessWidget {
                            Navigator.push(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => CustomerLogin()));
+                                builder: (context) => AllBookScreen()));
                         },
                       ),
                     ),
